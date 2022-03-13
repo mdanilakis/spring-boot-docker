@@ -1,1 +1,1 @@
-./gradlew clean test bootJar && docker build --tag "spring-boot-docker:latest" .
+./gradlew clean test bootJar && docker build -t spring-boot-docker .
