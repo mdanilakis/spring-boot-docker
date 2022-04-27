@@ -24,3 +24,30 @@ Date: Sun, 13 Mar 2022 20:30:00 GMT
 
 Hello, world!
 ```
+
+## Deploy
+
+This service can be deployed to Amazon ECS using Fargate.
+
+The `service.yml` CloudFormation template describes all the infrastructure that will be provisioned on AWS.
+
+First, you need to publish the Docker image to ECR (image registry).
+
+Authenticate to Docker:
+```
+aws ecr get-login-password --region REGION | docker login --username AWS --password-stdin ACCOUNT.dkr.ecr.REGION.amazonaws.com
+```
+
+Edit `scripts/publish.sh` and replace `ACCOUNT` and `REGION` with your AWS region and account id. Then run:
+
+```
+./scripts/publish.sh 1.0.0
+```
+
+Edit `deploy-params.json` and add required parameters (vpc, subnets, certificate, etc).
+
+Deploy the CloudFormation template:
+
+```
+./scripts/deploy.sh
+```

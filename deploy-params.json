@@ -1,0 +1,8 @@
+[
+  "VPC=vpc-xxx",
+  "SubnetA=subnet-a",
+  "SubnetB=subnet-b",
+  "Certificate=arn:aws:acm:REGION:ACCOUNT:certificate/CERTIFICATE",
+  "HostedZoneName=domain.com",
+  "Subdomain=spring-boot-docker"
+]
