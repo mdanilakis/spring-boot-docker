@@ -51,3 +51,5 @@ Deploy the CloudFormation template:
 ```
 ./scripts/deploy.sh
 ```
+
+See: [Deploying a Microservice with ECS and Fargate](https://michalisdaniilakis.com/posts/deploying-a-microservice-with-ecs-and-fargate)
